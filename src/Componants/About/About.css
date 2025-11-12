@@ -1,0 +1,116 @@
+#about {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Left Side */
+.leftabout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 50%;
+  gap: 15px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+/* Circle + Line Layout */
+.circle-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Circle (no animation, no glowing) */
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: aqua;
+  border: 2px solid aqua;
+}
+
+/* Removed hover animation */
+.circle:hover {
+  cursor: pointer;
+}
+
+/* Line */
+.line {
+  width: 2px;
+  height: 140px;
+  background-color: rgba(18, 179, 194, 0.375);
+}
+
+/* About Details */
+.aboutdtl {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  color: rgb(89, 89, 89);
+}
+
+/* Personal Info */
+.personalinfo ul {
+  list-style: none;
+}
+
+.personalinfo h1 {
+  font-weight: 700;
+  background: linear-gradient(to right, rgb(81, 81, 81), rgb(222, 212, 207), rgb(38, 255, 56));
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5vw;
+}
+
+.personalinfo span {
+  color: cadetblue;
+}
+
+/* Right Side */
+.rightabout {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width:750px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .rightabout {
+    margin-right: 10px;
+    width: 70%;
+    margin-left: 50px;
+  }
+
+  .leftabout {
+    width: 100%;
+    margin-left: 1px;
+  }
+
+  .personalinfo h1 {
+    font-size: 10vw;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  .line {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,55 @@
+#project {
+          height: 100%;
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 35px;
+}
+
+.slider {
+          height: 250px;
+          width: 90%;
+          display: flex;
+          align-items: center;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          gap: 30px;
+          scrollbar-width:none;
+          padding: 10px;
+}
+
+#project h1{
+          font-weight: 600;
+          background: linear-gradient(to right, rgb(236, 122, 0), rgb(222, 212, 207), rgb(38, 255, 56));
+          background-clip: text;
+          color: transparent;    
+          font-size: 2vmax;
+}
+#project .hovercard img {
+          height: 90%;
+          width: 90%;
+          box-shadow: 1px 0px 10px rgba(0, 0, 15, 0.872);
+ }
+
+@media (max-width:750px){
+          .card{
+                    max-width: 260px;
+          }
+          #project{
+                    gap: 3px;
+          }
+          #project h1 span{
+                    margin-left: 50px;
+          }
+          #project #text{
+                    margin-left: 30px;
+          }
+          #project .hovercard img {
+                    height: 80%;
+                    box-shadow: 1px 0px 10px rgba(0, 0, 15, 0.872);
+           }
+
+}
