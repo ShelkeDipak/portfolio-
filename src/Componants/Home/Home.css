@@ -1,151 +1,204 @@
-/* General layout */
 #home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 4rem 5%;
-  gap: 4rem;
-  min-height: 100vh;
-  background-color: #ffffff;
-  box-sizing: border-box;
+          height: 800px;
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10vw;
 }
 
-/* Left section (image) */
-.home-left {
-  flex: 1 1 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#home h1 {
+          color: rgba(0, 0, 0, 0.631);
 }
 
-.image-wrapper {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #00bfff;
-  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
-  animation: float 4s ease-in-out infinite;
+.righthome {
+          width: 50vw;
 }
 
-.profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+.download-button {
+          display: inline-block;
+          padding: 4px 15px;
+           margin-top:20px;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: 400;
+          background: transparent;
+          border: 1px solid #007bff ;
+          color: #007bff;
+          transition: background-color 0.3s ease;
+        }
+        .download-button:hover {
+          background-color: #0090d8;
+          transition: background-color 0.3s ease;
+          transition: transform 0.2s ease;
+          transform: scale(1.01);
+          color: white;
+          filter: drop-shadow(1px 1px 2px rgb(0, 0, 0));
+        }
+        
+
+.typewriter-text {
+          font-size: 25px;
+          font-weight: bold;
+          color: #2c2b2bd8;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+.img-box {
+          position: relative;
+          width: 25vw;
+          height: 50vh;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
 }
 
-/* Right section (text) */
-.home-right {
-  flex: 1 1 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+.img-box::before,
+.img-box::after {
+          content: '';
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          background: conic-gradient(transparent, transparent, transparent, rgb(0, 200, 255));
+          transform: rotate(0deg);
+          animation: rotate-border 10s linear infinite;
 }
 
-.home-right h1 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 700;
-  color: #222;
+.line-box img {
+          width: 370px;
+          height: 370px;
 }
 
-.highlight {
-  color: #007bff;
+.img-box::after {
+          animation-delay: -5s;
 }
 
-.typewriter {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  font-weight: 600;
-  color: #333;
+@keyframes rotate-border {
+          100% {
+                    transform: rotate(360deg);
+          }
 }
 
-.about-text {
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  color: #555;
-  line-height: 1.6;
-}
+.img-box .line-box {
+          position: relative;
+          width: 80%;
+          height: 80%;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1;
 
-/* Button and icons section */
-.cta-section {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.download-btn {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #007bff;
-  border: 1px solid #007bff;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.download-btn:hover {
-  background-color: #007bff;
-  color: white;
-  transform: scale(1.05);
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.social-icons a {
-  color: #007bff;
-  border: 1px solid #007bff;
-  border-radius: 50%;
-  padding: 6px;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  background-color: #007bff;
-  color: white;
-  transform: scale(1.2);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive design */
-@media (max-width: 992px) {
-  #home {
-    gap: 2rem;
-  }
-  .home-right {
-    align-items: center;
-    text-align: center;
-  }
-  .cta-section {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 600px) {
-  #home {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .image-wrapper {
-    width: 180px;
-    height: 180px;
-  }
-  .home-right {
-    align-items: center;
-  }
 }
  
+.icons {
+  margin-top: 15px;
+}
+
+.icon-box {
+  display: flex;
+  gap: 15px;
+ 
+ 
+}
+
+.icon-box svg {
+  width: 10vw;
+  height: 30px;
+  color: #007bff;
+  transition: transform 0.2s ease;
+  border: 1px solid #007bff ;
+  border-radius: 50%;
+  padding: 5px;
+ 
+
+ 
+}
+
+.icon-box svg:hover {
+  transform: scale(1.2);  
+  background-color: #0090d8;
+  color: white;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 2px rgb(0, 0, 0));
+}
+.icon-wrapper {
+  width: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-icons-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+ }
+ .cv-icons-wrapper .download-button{
+  margin-bottom: 20px;
+}
+
+
+@media (max-width:750px) {
+          #home {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column-reverse;
+          }
+
+          .righthome {
+
+                    width: 80vw;
+          }
+
+          .lefthome img {
+                    width: 60vw;
+                    height: 28vh;
+          }
+
+          .img-box {
+                    width: 60vw;
+                    height: 28vh;
+          }
+
+          .img-box::before,
+          .img-box::after {
+                    width: 400vw;
+                    height: 100vh;
+          }
+          .line-box{
+                    height: 50px;
+                   width: 40px;
+          }
+          .download-button {
+                    padding: 5px 10px;
+          }
+          .cv-and-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+           }
+          .cv-and-icons .download-button{
+            margin-bottom: 20px;
+          }
+          .cv-icons-wrapper .download-button {
+            margin-bottom: -10px;
+        }
+        .cv-icons-wrapper {
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+      }
+      .icon-box svg {
+        color: white;
+        background-color: #0090d8;
+        filter: drop-shadow(1px 1px 2px rgb(0, 0, 0));
+      }
+       
+
+}

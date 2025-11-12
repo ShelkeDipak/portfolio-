@@ -1,86 +1,66 @@
-import React from "react";
+ import React from 'react'
 import { Typewriter } from "react-simple-typewriter";
 import { CiLinkedin } from "react-icons/ci";
 import { TiSocialGithubCircular } from "react-icons/ti";
 import { SlSocialInstagram } from "react-icons/sl";
 import { PiYoutubeLogoThin } from "react-icons/pi";
-import "./Home.css";
+
+import './Home.css'
 
 function Home() {
   return (
-    <section id="home">
-      <div className="home-left">
-        <div className="image-wrapper">
-          <img src="img photo copy.png" alt="Dipak Shelke" className="profile-img" />
-        </div>
-      </div>
-
-      <div className="home-right">
-        <h1>
-          Hi 👋 <br /> I'm <span className="highlight">Dipak Shelke</span>
-        </h1>
-
-        <h2 className="typewriter">
+    <div id="home">
+      <div className="righthome">
+        <h1>Hii 👋 <br /> I'm Dipak Shelke</h1>
+        <br />
+        <div className="typewriter-text">
           <Typewriter
-            words={["Web Developer", "Software Developer", "Pro Video Editor"]}
-            loop
+            words={['Web Developer', 'Software Developer', 'Pro-Video Editor']}
+            loop={true}
             cursor
             cursorStyle="_"
-            typeSpeed={80}
+            typeSpeed={70}
             deleteSpeed={50}
             delaySpeed={1000}
           />
-        </h2>
+        </div>
+        <br />
+        <p>Welcome to my portfolio!
+          <br />
+          <br />
+          I'm a final-year ENTC Student and a passionate Full-Stack Developer with hands-on experience in both frontend and backend technologies. I enjoy transforming ideas into user-centric web applications through clean, efficient code and thoughtful design.</p>
+          
+          <div className="cv-icons-wrapper">
+  <a href="/filename.pdf" download className="download-button">
+    Download CV
+  </a>
+  <div className="icon-box">
+    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
+      <CiLinkedin />
+    </a>
+    <a href="https://github.com/settings/profile" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
+      <TiSocialGithubCircular />
+    </a>
+    <a href="https://www.instagram.com/accounts/onetap/?next=%2Fdipak_gaju_bhai_jaan_m%2Ffollowing%2F" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
+      <SlSocialInstagram />
+    </a>
+    <a href="https://www.youtube.com/@Dipak.2003-i7i" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
+      <PiYoutubeLogoThin />
+    </a>
+  </div>
+</div>
 
-        <p className="about-text">
-          Welcome to my portfolio! I'm a final-year ENTC Student and a passionate Full-Stack Developer
-          with hands-on experience in both frontend and backend technologies. I enjoy transforming
-          ideas into user-centric web applications through clean, efficient code and thoughtful design.
-        </p>
 
-        <div className="cta-section">
-          <a href="/filename.pdf" download className="download-btn">
-            Download CV
-          </a>
-
-          <div className="social-icons">
-            <a
-              href="https://www.linkedin.com/feed/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <CiLinkedin />
-            </a>
-            <a
-              href="https://github.com/settings/profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <TiSocialGithubCircular />
-            </a>
-            <a
-              href="https://www.instagram.com/accounts/onetap/?next=%2Fdipak_gaju_bhai_jaan_m%2Ffollowing%2F"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <SlSocialInstagram />
-            </a>
-            <a
-              href="https://www.youtube.com/@Dipak.2003-i7i"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <PiYoutubeLogoThin />
-            </a>
+      </div>
+      <div className="lefthome">
+        <div className="img-box">
+          <div className="line-box">
+            <img src="img photo copy.png" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  )
 }
 
-export default Home;
+export default Home
